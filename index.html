@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Exo-Space Weather | AAS 247 Splinter Session</title>
+    <meta name="description" content="Splinter session on particle detection and space weather at AAS 247 Phoenix." />
+    <meta property="og:title" content="Exo-Space Weather | AAS 247" />
+    <meta property="og:description" content="Join us for a discussion on exoplanet atmospheres and stellar particle environments." />
+    <meta property="og:image" content="./assets/cover.png" />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* SCROLL FIX */
+        html {
+            scroll-padding-top: 100px;
+        }
+
+        /* Custom Glass Effect - Slightly lighter border for better visibility on lighter bg */
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Gradient Text Helper */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white relative">
+
+    <nav id="navbar" class="fixed top-0 z-50 w-full transition-all duration-300 bg-slate-950/70 backdrop-blur-md border-b border-white/10">
+        <div class="flex items-center justify-between px-4 py-4 md:px-16 lg:px-24">
+            <a href="#" class="text-xl font-bold tracking-tighter text-white z-50">
+                Exo-Space<span class="text-cyan-400">Weather</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#schedule" class="hover:text-cyan-400 transition-colors">Schedule</a>
+                <a href="#submit" class="px-4 py-2 rounded-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500 hover:text-white transition-all">Pop Talks</a>
+            </div>
+
+            <button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-white z-50 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 text-xl md:hidden z-40">
+            <a href="#about" class="mobile-link hover:text-cyan-400">About</a>
+            <a href="#schedule" class="mobile-link hover:text-cyan-400">Schedule</a>
+            <a href="#submit" class="mobile-link text-cyan-400">Pop Talks</a>
+        </div>
+    </nav>
+
+    <div class="fixed inset-0 -z-50">
+        <img 
+            src="./assets/cover.png" 
+            onerror="this.style.display='none'"
+            alt="Starfield Background" 
+            class="w-full h-full object-cover opacity-80"
+        />
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/40 to-slate-900/20"></div>
+        
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+             <div class="absolute rounded-full top-0 left-1/4 -translate-x-1/2 w-[40rem] h-[40rem] bg-indigo-600/20 blur-[120px] mix-blend-screen animate-pulse"></div>
+             <div class="absolute rounded-full bottom-0 right-0 translate-x-1/3 w-[40rem] h-[40rem] bg-cyan-600/20 blur-[120px] mix-blend-screen"></div>
+        </div>
+    </div>
+
+    <main class="px-4 relative z-10 pb-20">
+        
+        <section class="flex flex-col items-center pt-32 md:pt-40">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-medium text-cyan-300 mb-6 border border-cyan-500/20">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                Splinter Session
+            </div>
+            
+            <h1 class="text-center text-5xl md:text-7xl font-bold tracking-tight text-white max-w-4xl drop-shadow-2xl">
+                Exo-Space Weather
+            </h1>
+            
+            <div class="mt-8 flex flex-col items-center gap-2 text-center">
+                <p class="text-xl text-white font-medium bg-gradient-to-r from-cyan-200 to-white text-gradient bg-clip-text">JANUARY 7th 2026 @ AAS 247 PHOENIX</p>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-6 text-slate-300 mt-2">
+                    <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Phoenix Convention Center 121 B</span>
+                    <span class="hidden md:inline">|</span>
+                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 1:00 - 5:30 PM MT</span>
+                </div>
+
+                <div class="mt-8">
+                    <a href="https://submissions.mirasmart.com/AAS247/Itinerary/EventDetail.aspx?evt=157" 
+                       target="_blank"
+                       class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-400/50 text-cyan-300 font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-[0_0_20px_-5px_rgba(6,182,212,0.3)] group">
+                        <i data-lucide="calendar-check" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        <span>View in AAS Itinerary</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="about" class="flex flex-col max-w-4xl mx-auto mt-20 p-8 md:p-12 rounded-2xl glass shadow-2xl">
+            <h2 class="text-2xl font-semibold text-white mb-6 text-center border-b border-white/10 pb-4">Session Overview</h2>
+            <p class="text-lg leading-relaxed text-slate-200 text-justify">
+                With the confluence of new Solar System monitoring programs, renewed solar, stellar, and planet modeling efforts, and the high community priority to understand exoplanet atmospheres, tackling the problem of detecting and characterizing particles in the space environments of planets has never been more needed. 
+                <br><br>
+                However, until this date, we have not detected directly any particles from other stars or exoplanetary systems. The detection of particles is a missing piece in the puzzle of stellar and planetary evolution. To support this research field and promote an environment for scientific discussion, we will hold this splinter session to discuss particle detection in the context of space weather.
+            </p>
+        </div>
+
+        <section id="resources" class="mt-24 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://www.kiss.caltech.edu/final_reports/KISS_The_Exospace_Weather_Frontier.pdf" target="_blank" class="p-6 rounded-xl glass hover:bg-white/10 transition duration-300 border-t border-cyan-500/30 group">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors">Exo-Space Weather Report</h2>
+                        <i data-lucide="external-link" class="text-slate-400 group-hover:text-cyan-400 w-5 h-5"></i>
+                    </div>
+                    <p class="text-sm text-slate-300 mt-2">Access the full report from the KISS Workshop: The Exospace Weather Frontier.</p>
+                </a>
+                <a href="https://www.kiss.caltech.edu/workshops/exoplanet-particles/exoplanet-particles.html" target="_blank" class="p-6 rounded-xl glass hover:bg-white/10 transition duration-300 border-t border-cyan-500/30 group">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors">Observing Particle Environments</h2>
+                        <i data-lucide="external-link" class="text-slate-400 group-hover:text-cyan-400 w-5 h-5"></i>
+                    </div>
+                    <p class="text-sm text-slate-300 mt-2">Access information about the 2023 KISS Workshop on stellar and exoplanet particle environments.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="schedule" class="mt-24 max-w-4xl mx-auto px-2 md:px-0">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-semibold text-white">Schedule</h2>
+            </div>
+            
+            <div class="glass rounded-xl overflow-hidden border border-white/10 shadow-lg overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead class="bg-white/5 text-white">
+                        <tr>
+                            <th class="p-6 md:pl-12 font-semibold w-32">Time</th>
+                            <th class="p-6 font-semibold w-64">Speaker</th> <th class="p-6 font-semibold">Talk Title</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10 text-slate-200">
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">1:00 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">R O Parke Loyd</div>
+                                <div class="text-sm text-slate-400 mt-1">Eureka Scientific</div>
+                            </td>
+                            <td class="p-6 italic align-top">Exo-Space Weather Report</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">1:20 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Mike Chaffin</div>
+                                <div class="text-sm text-slate-400 mt-1">University of Colorado Boulder</div>
+                            </td>
+                            <td class="p-6 italic align-top">Space Weather and Planetary Evolution</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">1:40 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Ben Pearce</div>
+                                <div class="text-sm text-slate-400 mt-1">Johns Hopkins University</div>
+                            </td>
+                            <td class="p-6 italic align-top">Space Weather and Biology</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">2:00 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Panel Discussion</div>
+                            </td>
+                            <td class="p-6 italic align-top">What should we most focus on observing or modeling?</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">2:30 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Pop Talks</div>
+                            </td>
+                            <td class="p-6 italic align-top">1 minute, 1 slide presentations about space weather</td>
+                        </tr>
+                        <tr class="bg-white/5">
+                            <td class="p-4 md:pl-12 font-mono text-slate-400 text-sm align-middle">3:00 PM</td>
+                            <td colspan="2" class="p-4 text-slate-300 font-bold tracking-widest uppercase text-center text-sm align-middle">Coffee Break</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">3:30 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Nuri Park</div>
+                                <div class="text-sm text-slate-400 mt-1">Boston University</div>
+                            </td>
+                            <td class="p-6 italic align-top">Observations of Space Weather in the Solar System</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">3:50 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">TBD</div>
+                            </td>
+                            <td class="p-6 italic align-top">Modeling of stellar space weather</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">4:10 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Rachel Osten</div>
+                                <div class="text-sm text-slate-400 mt-1">STScI</div>
+                            </td>
+                            <td class="p-6 italic align-top">Observation of stellar winds</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">4:30 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Constanza Argiroffi</div>
+                                <div class="text-sm text-slate-400 mt-1">University of Palermo</div>
+                            </td>
+                            <td class="p-6 italic align-top">Observations of stellar CMEs</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-6 md:pl-12 font-mono text-cyan-400 align-top">4:50 PM</td>
+                            <td class="p-6 align-top">
+                                <div class="font-medium text-white">Panel Discussion</div>
+                            </td>
+                            <td class="p-6 italic align-top">What would it take to accept a CME detection?</td>
+                        </tr>
+                        <tr class="bg-white/5">
+                            <td class="p-4 md:pl-12 font-mono text-slate-400 text-sm align-middle">5:30 PM</td>
+                            <td colspan="2" class="p-4 text-slate-300 font-bold tracking-widest uppercase text-center text-sm align-middle">Adjourn</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="submit" class="flex flex-col max-w-3xl px-6 mt-32 mx-auto items-center justify-center text-center py-16 rounded-xl glass border border-cyan-500/20 shadow-[0_0_60px_-15px_rgba(6,182,212,0.2)]">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">
+                Submit your Pop Talk
+            </h2>
+            <p class="text-slate-200 mt-4 mb-8 text-lg">
+                We invite you to submit a <strong class="text-cyan-400">1 minute, 1 slide</strong> presentation to the session.
+            </p>
+            
+            <div class="bg-white p-3 rounded-lg mb-8 shadow-lg">
+                <img alt="Submission QR Code" width="200" height="200" src="./assets/qr.png" onerror="this.src='https://placehold.co/200x200?text=QR+Code'" class="rounded" />
+            </div>
+
+            <a href="https://forms.gle/etUCNhq15QiHcxs27" class="group inline-flex items-center gap-3 px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 text-lg">
+                <span>Submit Now</span>
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer class="flex flex-col items-center justify-center w-full py-12 mt-32 border-t border-white/5 bg-black/30 backdrop-blur-sm">
+        <div class="mb-6">
+            <img alt="Keck Institute Logo" width="200" src="./assets/keck.png" onerror="this.src='https://placehold.co/200x80?text=Keck+Logo'" class="opacity-90 hover:opacity-100 transition-opacity" />
+        </div>
+        <p class="text-sm text-slate-400 text-center px-4">
+            This event is supported by the <a href="https://www.kiss.caltech.edu/" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2">Keck Institute for Space Studies</a>.
+        </p>
+    </footer>
+
+    <script>
+        // Initializing Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        btn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            // Accessibility Update
+            btn.setAttribute('aria-expanded', isMenuOpen);
+            
+            if (isMenuOpen) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                btn.setAttribute('aria-expanded', false); // Accessibility Update
+                menu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+</body>
+</html>
